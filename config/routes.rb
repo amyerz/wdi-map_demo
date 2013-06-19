@@ -1,4 +1,8 @@
 MapDemo::Application.routes.draw do
+  get "home/map1"
+
+  get "home/map2"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
