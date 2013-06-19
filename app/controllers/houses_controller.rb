@@ -2,7 +2,8 @@ class HousesController < ApplicationController
   # GET /houses
   # GET /houses.json
   def index
-    @houses = House.all
+    @houses = House.near("San Francisco, CA", 300, :order => :distance)
+    @markers = @houses.to_gmaps4rails
 
     respond_to do |format|
       format.html # index.html.erb

@@ -1,5 +1,14 @@
 <h1>Listing houses</h1>
 
+<p><%= @markers %></p>
+
+<%= gmaps({
+  "direction" => {
+    "data" => {"from" => "San Francisco, CA", "to" => "San Diego, CA"}
+  },
+  "markers" => {"data" => @markers}
+}) %>
+
 <table>
   <tr>
     <th>Address</th>
