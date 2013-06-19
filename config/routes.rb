@@ -1,4 +1,7 @@
 MapDemo::Application.routes.draw do
+  resources :houses
+
+
   get "home/map1"
 
   get "home/map2"
